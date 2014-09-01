@@ -1,0 +1,25 @@
+/*
+    exp.json - Configuration for exp-sass
+
+    Transform by prefixing and minifying.
+ */
+{
+    control: {
+        transforms: {
+            name:   'compile-sass',
+            from:   'sass',
+            to:     'css',
+            script: `
+                function transform(contents, meta, service) {
+                    let sass = Cmd.locate('sass')
+                    if (sass) {
+                        contents = run(sass + ' --stdin --scss', contents)
+                    } else {
+                        trace('Warn', 'Cannot find sass')
+                    }
+                    return contents
+                }
+            `
+        }
+    }
+}
