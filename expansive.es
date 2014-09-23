@@ -1,10 +1,10 @@
 /*
-    exp.json - Configuration for exp-sass
+    expansive.es - Configuration for exp-sass
 
     Transform by prefixing and minifying.
  */
-{
-    control: {
+Expansive.load({
+    expansive: {
         transforms: {
             name:   'compile-sass',
             from:   'sass',
@@ -22,4 +22,4 @@
             `
         }
     }
-}
+})
