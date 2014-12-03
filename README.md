@@ -7,7 +7,7 @@ Provides the 'compile-sass' service.
 
 ### To install:
 
-exp install exp-sass
+exp install sass
 
 ### Get Pak from
 

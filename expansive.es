@@ -7,8 +7,8 @@ Expansive.load({
     expansive: {
         transforms: {
             name:   'compile-sass',
-            from:   'sass',
-            to:     'css',
+            input:  'sass',
+            output: 'css',
             script: `
                 function transform(contents, meta, service) {
                     let sass = Cmd.locate('sass')
