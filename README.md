@@ -7,8 +7,8 @@ Provides the 'compile-sass' service.
 
 ### To install:
 
-exp install sass
+    pak install exp-sass
 
 ### Get Pak from
 
-[https://github.com/embedthis/pak](https://github.com/embedthis/pak)
+[https://embedthis.com/pak/](https://embedthis.com/pak/download.html)
