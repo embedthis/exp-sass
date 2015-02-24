@@ -6,8 +6,9 @@
 Expansive.load({
     transforms: {
         name:   'compile-sass-css',
-        input:  'sass',
-        output: 'css',
+        mappings: {
+            sass: 'css'
+        },
         script: `
             function transform(contents, meta, service) {
                 let sass = Cmd.locate('sass')
