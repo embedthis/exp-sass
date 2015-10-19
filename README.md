@@ -1,9 +1,9 @@
 exp-sass
 ===
 
-Expansive plugin for Sass files.
+Expansive plugin for Sass files. This service compiles sass files into css.
 
-Provides the 'compile-sass' service.
+Provides the 'sass' service.
 
 ### To install:
 

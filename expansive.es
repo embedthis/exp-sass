@@ -4,21 +4,28 @@
     Transform by prefixing and minifying.
  */
 Expansive.load({
-    transforms: {
-        name:   'compile-sass-css',
-        mappings: {
-            sass: 'css'
-        },
-        script: `
-            function transform(contents, meta, service) {
-                let sass = Cmd.locate('sass')
-                if (sass) {
-                    contents = run(sass + ' --stdin --scss', contents)
-                } else {
+
+    services: {
+        name:   'sass',
+
+        transforms: {
+            mappings: {
+                sass: 'css'
+            },
+
+            init: function(transform) {
+                transform.sass = Cmd.locate('sass')
+                if (!transform.sass) {
                     trace('Warn', 'Cannot find sass')
+                }
+            },
+
+            render: function(contents, meta, transform) {
+                if (transform.sass) {
+                    contents = run(transform.sass + ' --stdin --scss', contents)
                 }
                 return contents
             }
-        `
+        }
     }
 })
