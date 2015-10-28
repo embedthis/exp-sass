@@ -14,15 +14,15 @@ Expansive.load({
             },
 
             init: function(transform) {
-                transform.sass = Cmd.locate('sass')
+                transform.sass = Cmd.locate('node-sass')
                 if (!transform.sass) {
-                    trace('Warn', 'Cannot find sass')
+                    trace('Warn', 'Cannot find node-sass')
                 }
             },
 
             render: function(contents, meta, transform) {
                 if (transform.sass) {
-                    contents = run(transform.sass + ' --stdin --scss', contents)
+                    contents = run(transform.sass, contents)
                 }
                 return contents
             }
