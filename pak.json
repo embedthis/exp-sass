@@ -1,7 +1,7 @@
 {
     "name": "exp-sass",
     "description": "Sass Plugin for Expansive",
-    "version": "0.2.4",
+    "version": "0.2.5",
     "keywords": [
         "expansive-plugin",
         "sass"
@@ -15,11 +15,9 @@
         "expansive": ">=0.7.0",
         "pak": ">=0.11.3"
     },
-    "pak": {
-        "scripts": {
-            "postcache": {
-                "script": "npm('install -g', 'node-sass')"
-            }
+    "scripts": {
+        "postcache": {
+            "script": "npm('install -g', 'node-sass')"
         }
     }
 }
