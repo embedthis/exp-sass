@@ -1,7 +1,7 @@
 {
     "name": "exp-sass",
     "description": "Sass Plugin for Expansive",
-    "version": "0.2.5",
+    "version": "1.0.0",
     "keywords": [
         "expansive-plugin",
         "sass"
@@ -12,8 +12,8 @@
         "url": "git://github.com/embedthis/exp-sass.git"
     },
     "devDependencies": {
-        "expansive": ">=0.7.0",
-        "pak": ">=0.11.3"
+        "expansive": ">=1.0.0",
+        "pak": ">=1.0.0"
     },
     "scripts": {
         "postcache": {

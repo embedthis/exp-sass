@@ -16,6 +16,8 @@ Expansive.load({
             init: function(transform) {
                 transform.sass = Cmd.locate('node-sass')
                 if (!transform.sass) {
+                    run('npm install -g node-sass')
+                    transform.sass = Cmd.locate('node-sass')
                     trace('Warn', 'Cannot find node-sass')
                 }
             },
